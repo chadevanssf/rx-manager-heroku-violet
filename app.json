@@ -1,5 +1,5 @@
 {
-  "name": "Rx Manager for Heroku and HelloViolet.ai",
+  "name": "rx-manager-heroku-violet",
   "description": "Interaction manager for Rx Manager, hosted on Heroku, powered by HelloViolet.ai",
   "keywords": [
     "Violet",
@@ -43,6 +43,11 @@
     },
     {
       "plan": "herokuconnect:demo"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
     }
   ]
 }
