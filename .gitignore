@@ -1,0 +1,16 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Compiles and temp directories
+/dist
+/tmp
+
+# Dependency directories
+node_modules
+
+# Cache directories
+.npm
+.vscode
+.DS_Store

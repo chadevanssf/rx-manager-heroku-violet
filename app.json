@@ -1,0 +1,48 @@
+{
+  "name": "Rx Manager for Heroku and HelloViolet.ai",
+  "description": "Interaction manager for Rx Manager, hosted on Heroku, powered by HelloViolet.ai",
+  "keywords": [
+    "Violet",
+    "Heroku",
+    "Salesforce",
+    "Alexa"
+  ],
+  "website": "https://helloviolet.ai/",
+  "repository": "https://github.com/chadevanssf/rx-manager-heroku-violet",
+  "env": {
+    "PORT": {
+      "description": "Standard port to listen on",
+      "value": "8080",
+      "required": true
+    },
+    "SCRIPT_NAME": {
+      "description": "Which Voice Script will be used with the service, in the scripts directory",
+      "value": "scripts/default.js",
+      "required": true
+    },
+    "SCRIPT_PATH": {
+      "description": "The path used for the script, e.g. http://url:port/path",
+      "value": "default",
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "What environment this app is running in, 'production' has special default meaning to Express",
+      "value": "DEV",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    },
+    {
+      "plan": "herokuconnect:demo"
+    }
+  ]
+}
